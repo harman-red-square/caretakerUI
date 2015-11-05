@@ -1,0 +1,274 @@
+<div class="col-mod-12 settingForm" ng-controller="PersonalizationCtrl">
+    <form name="personalizationForm">
+        <div class="form-group settingsFormGroup">
+            <div class="col-sm-12 settingFormHeader">
+                <h3>Sound</h3>
+            </div>
+            <div class="col-sm-12 settingFormItem">
+                <label class="control-label col-sm-3">Vibrate</label>
+                <div class="col-sm-offset-1 col-sm-8">
+                    <div class="radio settingFormInput">
+                        <div class="onoffswitch">
+                            <input type="checkbox" name="onoffvibrate" class="onoffswitch-checkbox" ng-true-value="1" ng-false-value="0" ng-model="personalize.SoundSettings.vibrate" id="onoffvibrate" checked>
+                            <label class="onoffswitch-label" for="onoffvibrate"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="col-sm-12 settingFormItem multipleInput">
+                    <label class="control-label col-sm-3">Volume</label>
+                    <div class="col-sm-offset-1 col-sm-8">
+
+                        <div class="col-sm-12 noPadding">
+                            <div class="col-sm-5">
+                                <div class="checkbox bottomMargin">
+                                    <label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-7 noPadding">                         
+                                <div class="bottomMargin">
+                                    <span>
+                                        Media:
+                                    </span>
+                                    <div class="range settingFormInput">
+                                        <label class="range-inline">
+                                            <input id="slider1" type="range" ng-model="personalize.SoundSettings.volume.media" min="0" max="100" step="10" />
+                                        </label>
+                                    </div>                               
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 noPadding">
+                            <div class="col-sm-5">
+                                <div class="checkbox bottomMargin">
+                                    <label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-7 noPadding">                         
+                                <div class="bottomMargin">
+                                    <span>
+                                        Ringtones & Notifications:
+                                    </span>
+                                    <div class="range settingFormInput">
+                                        <label class="range-inline">
+                                            <input id="slider1" type="range" ng-model="personalize.SoundSettings.volume.ringtone" min="0" max="100" step="10" />
+                                        </label>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 noPadding">
+                            <div class="col-sm-5">
+                                <div class="checkbox bottomMargin">
+                                    <label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-7 noPadding">                         
+                                <div class="bottomMargin">
+                                    <span>
+                                        Alarm:
+                                    </span>
+                                    <div class="range settingFormInput">
+                                        <label class="range-inline">
+                                            <input id="slider1" type="range" ng-model="personalize.SoundSettings.volume.alarm" min="0" max="100" step="10" />
+                                        </label>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="col-sm-12 settingFormItem multipleInput">
+                        <label class="control-label col-sm-3">Tones</label>
+                        <div class="col-sm-offset-1 col-sm-8">
+                            <div class="col-sm-12 noPadding">
+                                <div class="col-sm-5">
+                                    <div class="checkbox bottomMargin">
+                                        <label>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-7 noPadding"> 
+                                    <span>
+                                        Ringtones:
+                                    </span>
+                                    <div class="radio settingFormInput">
+                                        <select class="form-control" ng-model="personalize.SoundSettings.Tones.ringtone" ng-change="checkName(tone)" ng-options="search.tone as search.tone for search in toneData"></select>
+                                    </div>
+                                </div>
+                                <img class="volume" src="../images/2000px-Speaker_Icon.svg.png" alt=""/>
+
+                            </div>
+                        </div>
+                    </div>            
+                </div>
+                <div>
+                    <div class="col-sm-12 settingFormItem multipleInput">
+                        <label class="control-label col-sm-3"></label>
+                        <div class="col-sm-offset-1 col-sm-8">
+                            <div class="col-sm-12 noPadding">
+                                <div class="col-sm-5">
+                                    <div class="checkbox bottomMargin">
+                                        <label>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-7 noPadding"> 
+                                    <span>
+                                        Alerts:
+                                    </span>
+                                    <div class="radio settingFormInput">
+                                        <select class="form-control" ng-model="personalize.SoundSettings.Tones.alert" ng-change="checkName(tone)" ng-options="search.tone as search.tone for search in alertData"></select>
+                                    </div>
+                                </div>
+                                <img class="volume" src="../images/2000px-Speaker_Icon.svg.png" alt=""/>
+
+                            </div>
+                        </div>
+                    </div>            
+                </div>
+            </div>
+        </div>
+        <div class="form-group settingsFormGroup">
+            <div class="col-sm-12 settingFormHeader">
+                <h3>Search</h3>
+            </div>
+            <div>
+                <div class="col-sm-12 settingFormItem">
+                    <label class="control-label col-sm-3">Search Engine</label>
+                    <div class="col-sm-offset-1 col-sm-8">
+
+                        <div class="radio settingFormInput">
+                            <select class="form-control" ng-model="personalize.search.searchEngine" ng-change="checkName(lang)" ng-options="search.searchEngine as search.searchEngine for search in searchList"></select>
+
+                        </div>
+                        <!--                        <div class="radio settingFormOptions" ng-repeat="status in vibrate">
+                                                    <label>
+                                                        <input type="radio" name="vib" ng-model="vib" id="vib+{{status.lable}}"  ng-value="status.value">
+                                                      <label for="vib+{{status.lable}}">{{status.lable}}</label>   
+                                                    </label>
+                                                </div>-->
+
+                    </div>  
+                </div>
+            </div>
+            <div>
+                <div class="col-sm-12 settingFormItem">
+                    <label class="control-label col-sm-3">Search Suggestion</label>
+                    <div class="col-sm-offset-1 col-sm-8">
+                        <div class="radio settingFormInput">
+                            <div class="onoffswitch">
+                                <input type="checkbox" name="onoffsearch" class="onoffswitch-checkbox" ng-true-value="1" ng-false-value="0" ng-model="personalize.search.searchSuggestions" id="onoffsearch" checked>
+                                <label class="onoffswitch-label" for="onoffsearch"></label>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div class="col-sm-12 settingsInfoText">
+                The characters you type when entering a search are sent to multiple search providers and will be used to send you search suggestions. Additional data charges may apply.            </div>
+        </div>
+        <div class="form-group settingsFormGroup">
+            <div class="col-sm-12 settingFormHeader">
+                <h3>Date and Time</h3>
+            </div>
+            <div>
+                <div class="col-sm-12 settingFormItem">
+                    <label class="control-label col-sm-3">Set Automatically</label>
+                    <div class="col-sm-offset-1 col-sm-8">
+                        <div class="radio settingFormInput">
+                            <div class="onoffswitch">
+                                <input type="checkbox" name="onoffauto" class="onoffswitch-checkbox" ng-true-value="1" ng-false-value="0" ng-model="personalize.dateTime.setAutomatically" id="onoffauto" checked>
+                                <label class="onoffswitch-label" for="onoffauto"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+            <div ng-if="!personalize.dateTime.setAutomatically">
+                <div>
+                    <div class="col-sm-12 settingFormItem">
+                        <label class="control-label col-sm-3">Date</label>
+                        <div class="col-sm-offset-1 col-sm-8">
+                            <div class="settingFormInput">
+                                <div class="input-group">
+                                    <input type="text" class="datePicker" uib-datepicker-popup ng-model="dt" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </div>
+                                <!--<button type="button" class="btn btn-sm btn-info" ng-click="today()">Today</button>-->
+                            </div>
+                        </div>
+                    </div>            
+                </div>
+                <div>
+                    <div class="col-sm-12 settingFormItem">
+                        <label class="control-label col-sm-3">Time</label>
+                        <div class="col-sm-offset-1 col-sm-8">
+                            <div class="radio settingFormInput">
+                                <uib-timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></uib-timepicker>
+                            </div>
+                        </div>
+                    </div>            
+                </div>
+                <div>
+                    <div class="col-sm-12 settingFormItem">
+                        <label class="control-label col-sm-3">Region</label>
+                        <div class="col-sm-offset-1 col-sm-8">
+                            <div class="radio settingFormInput">
+                                <select class="form-control" ng-model="region" ng-change="checkName(lang)" ng-options="search.country as search.country for search in region"></select>
+
+                            </div>
+                        </div>
+                    </div>            
+                </div>            
+                <div>
+                    <div class="col-sm-12 settingFormItem">
+                        <label class="control-label col-sm-3">City</label>
+                        <div class="col-sm-offset-1 col-sm-8">
+                            <div class="radio settingFormInput">
+                                <select class="form-control" ng-model="lang" ng-change="checkName(lang)" ng-options="search.cityName as search.cityName for search in city"></select>
+
+                            </div>
+                        </div>
+                    </div>            
+                </div>
+            </div>
+            <div>
+                <div class="col-sm-12 settingFormItem">
+                    <label class="control-label col-sm-3">Time Format</label>
+                    <div class="col-sm-offset-1 col-sm-8">
+                        <div class="radio settingFormInput">
+                            <select class="form-control" ng-model="personalize.dateTime.timeFormat" ng-change="checkName(lang)" ng-options="search.time as search.time for search in timeFormat"></select>
+
+                        </div>
+                    </div>
+                </div>
+                <!--                  <div class="col-sm-12 settingsInfoText">
+                                      Depending on your service agreement, extra charges may apply for data when you are in a roaming area.
+                                  </div>-->
+            </div>
+        </div>
+        <div class="form-group settingsFormGroup">
+            <div class="col-sm-12 settingFormHeader">
+                <h3>Language</h3>
+            </div>
+            <div>
+                <div class="col-sm-12 settingFormItem">
+                    <label class="control-label col-sm-3">Language</label>
+                    <div class="col-sm-offset-1 col-sm-8">
+                        <div class="radio settingFormInput">
+                            <select class="form-control" ng-model="personalize.language" ng-change="checkName(lang)" ng-options="search.language as search.language for search in langData"></select>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </form>    
+</div>

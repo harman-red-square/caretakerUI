@@ -1,0 +1,5 @@
+mainAppModule.service('settingsDataService', [function () {
+        
+}]);
+
+

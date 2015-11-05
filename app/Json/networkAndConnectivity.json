@@ -1,0 +1,39 @@
+{
+    "data": {
+        "networkAndConnectivity": {
+            "geolocation": {
+                "geolocation": 1
+            },
+            "callSettings": {
+                "voiceMail": "98181167384",
+                "callForward": [
+                    {
+                        "callFowardOption": "ALWAYS_FORWARD",
+                        "callFowardEnabled": 1,
+                        "callFowardNumber": "1243"
+                    },
+                    {
+                        "callFowardOption": "FORWARD_WHEN_BUSY",
+                        "callFowardEnabled": 0,
+                        "callFowardNumber": "1243"
+                    },
+                    {
+                        "callFowardOption": "Forward_When_Unanswered",
+                        "callFowardEnabled": 0,
+                        "callFowardNumber": "1243"
+                    },
+                    {
+                        "callFowardOption": "Forward_When_Unreachable",
+                        "callFowardEnabled": 1,
+                        "callFowardNumber": "1243"
+                    }
+                ]
+            },
+            "celluarAndData": {
+                "dataRoaming": 1
+            }
+        }
+    },
+    "status": "200",
+    "message": "Succesful"
+}

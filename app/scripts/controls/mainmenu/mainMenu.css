@@ -1,0 +1,35 @@
+/** UDM Settings**/
+.mainMenu ul{
+    display: inline-block;
+    margin-top: 10px;
+    width: 100%;
+    padding: 0;
+}
+
+.mainMenu ul li{
+    /*border: 1px solid #b3b4b5;*/
+    text-align: center;
+    height: 35px;
+    line-height: 32px;
+/*    padding: 0px 5.1%;*/
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 14px;
+    min-width: 20%;
+    background: #f0f0f0;
+}
+
+.mainMenu ul  li:nth-child(n) {
+    border-right: 0;
+}
+
+.mainMenu ul  li:last-child{
+    /*border: 1px solid #b3b4b5;*/
+}
+
+.mainMenu ul li.selected {
+    border-bottom: 5px solid #b0b0b0;
+    color: #333333;
+}

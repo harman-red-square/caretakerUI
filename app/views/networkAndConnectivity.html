@@ -1,0 +1,102 @@
+<div class="col-mod-12 settingForm" ng-controller="networkAndConnectivityCtrl">
+    <form name="networkAndConnectivityForm">
+        <div class="form-group settingsFormGroup">
+            <div class="col-sm-12 settingFormHeader">
+                <h3>Geolocation</h3>
+            </div>
+            <div class="col-sm-12 settingFormItem">
+                <label class="control-label col-sm-3">Geolocation</label>
+                <div class="col-sm-offset-1 col-sm-8 rightItem">
+                    <div class="settingFormInput">
+                        <div class="onoffswitch">
+                            <input type="checkbox" name="onoffvibrate" ng-true-value="1" ng-false-value="0" ng-model="items.geolocation.geolocation" class="onoffswitch-checkbox" id="onoffvibrate1">
+                            <label class="onoffswitch-label" for="onoffvibrate1"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group settingsFormGroup">
+            <div class="col-sm-12 settingFormHeader">
+                <h3>Call Settings</h3>
+            </div>
+            <div class="bottomMargin">
+                <div class="col-sm-12 settingFormItem">
+                    <label class="control-label col-sm-3">Voice Mail</label>
+                    <div class="col-sm-offset-1 col-sm-8 rightItem">
+                        <div class="settingFormInput">
+                            <input type="text" maxlength="10" name="voiceMail" placeholder="Enter voicemail number" ng-model="items.callSettings.voiceMail" class="form-control"
+                                   ng-pattern="/^(\d)+$/" ng-class="{ 'hasError' : networkAndConnectivityForm.voiceMail.$error.pattern}">
+                        </div>
+                    </div>  
+                </div>
+            </div>
+
+            <div class="bottomMargin">
+                <div class="col-sm-12 settingFormItem multipleInput">
+                    <label class="control-label col-sm-3">Call Forwarding</label>
+                    <div class="col-sm-offset-1 col-sm-8 rightItem">                        
+                        <div class="col-sm-12 noPadding rightItemRow" ng-repeat="callFarward in items.callSettings.callForward track by $index">
+                            <div class="col-sm-12 noPadding">
+                                <div class="col-sm-5">
+                                    <div class="bottomMargin">
+                                        <label>{{callFarward.callFowardOption}}</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-7 noPadding">                         
+                                    <div class="bottomMargin">
+                                        <div class="settingFormInput">
+                                            <div class="onoffswitch">
+                                                <input type="checkbox" name="callForwarding" ng-true-value="1" ng-false-value="0" ng-model="callFarward.callFowardEnabled" class="onoffswitch-checkbox" id="onoffvibrate+{{$index}}">
+                                                <label class="onoffswitch-label" for="onoffvibrate+{{$index}}"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 noPadding" ng-show="callFarward.callFowardEnabled">
+                                <div class="col-sm-5">
+                                    <div class="bottomMargin">
+                                        <label class="childLabel">Voice calls to </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-7 noPadding">                         
+                                    <div class="bottomMargin">
+                                        <div class="settingFormInput">
+                                            <ng-form name="customForm1">
+                                                <input type="text" maxlength="10" name="callForwardVoiceMail" ng-model="callFarward.callFowardNumber" placeholder="Enter voicemail number" class="form-control"
+                                                       ng-pattern="/^(\d)+$/" ng-class="((customForm1.callForwardVoiceMail.$invalid) || (callFarward.callFowardEnabled && callFarward.callFowardNumber == '')) ? 'hasError' : ''">
+                                                <div></div>
+                                            </ng-form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group settingsFormGroup">
+            <div class="col-sm-12 settingFormHeader">
+                <h3>Celluar & Data</h3>
+            </div>            
+            <div class="bottomMargin">
+                <div class="col-sm-12 settingFormItem">
+                    <label class="control-label col-sm-3">Data Roaming</label>
+                    <div class="col-sm-offset-1 col-sm-8 rightItem">
+                        <div class="settingFormInput">
+                            <div class="onoffswitch">
+                                <input type="checkbox" name="dataRoaming" ng-true-value="1" ng-false-value="0" ng-model="items.celluarAndData.dataRoaming" ng-click="openDataRoamingPopup()" class="onoffswitch-checkbox" id="onoffvibrate6">
+                                <label class="onoffswitch-label" for="onoffvibrate6"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 settingsInfoText">
+                    Depending on your service agreement, extra charges may apply for data when you are in a roaming area.
+                </div>
+            </div>
+        </div>
+    </form>    
+</div>

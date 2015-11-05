@@ -1,0 +1,72 @@
+<div class="col-mod-12 settingForm"  ng-controller="DeviceCtrl">
+    <form name="deviceForm">
+        <div class="form-group settingsFormGroup">
+            <div class="col-sm-12 settingFormHeader">
+                <h3>Accessibility</h3>
+            </div>
+            <div class="col-sm-12 settingFormItem">
+                <label class="control-label col-sm-3">Color Filter</label>
+                <div class="col-sm-offset-1 col-sm-8">
+
+                    <div class="radio settingFormInput">
+                        <div class="onoffswitch">
+<!--                            <input type="checkbox" name="onoffswitch" ng-model = "ifenable" class="onoffswitch-checkbox" id="myonoffswitch">-->
+                            <input type="checkbox" name="onoffswitch"  ng-true-value="1" ng-false-value="0" ng-model = "items.colorFilter.isEnabled" class="onoffswitch-checkbox" id="myonoffswitch">
+                            <label class="onoffswitch-label" for="myonoffswitch">
+                                <span class="onoffswitch-inner"></span>
+                                <span class="onoffswitch-switch"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-if="items.colorFilter.isEnabled">
+                <div class="col-sm-12 settingFormItem">
+                    <label class="control-label col-sm-3">Invert</label>
+                    <div class="col-sm-offset-1 col-sm-8">
+                        <div class="radio settingFormInput">
+                            <div class="onoffswitch">
+                                <input type="checkbox" name="invertonoffswitch"  ng-true-value="1" ng-false-value="0"   ng-model ="items.colorFilter.invert" class="onoffswitch-checkbox" id="invertonoffswitch">
+                                <label class="onoffswitch-label" for="invertonoffswitch">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 settingFormItem">
+                    <label class="control-label col-sm-3">Grayscale</label>
+                    <div class="col-sm-offset-1 col-sm-8">
+                        <div class="radio settingFormInput">
+                            <div class="onoffswitch">
+                                <input type="checkbox" name="grayonoffswitch" ng-true-value="1" ng-false-value="0" ng-model ="items.colorFilter.grayscale"  class="onoffswitch-checkbox" id="grayonoffswitch">
+                                <label class="onoffswitch-label" for="grayonoffswitch">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 settingFormItem">
+                    <label class="control-label col-sm-3">Contrast</label>
+                    <div class="col-sm-offset-1 col-sm-8">
+                        <div class="range settingFormInput">
+                            <label class="range-inline">
+                                <input id="slider1" type="range" min="0" max="100" ng-model= "items.colorFilter.contrast" step="10" />
+                                <!--                            <input type="range" name="inlineRadioOptions" id="inlineRadio1" value="option1"> On-->
+                            </label>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>

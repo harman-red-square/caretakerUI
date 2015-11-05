@@ -1,0 +1,13 @@
+<div class="modal-header">
+    <span class="modal-title">{{popupData.items.headerText}}</span>
+    <span class="modal-cross-btn" ng-click="cancel()">&#10006;</span>
+</div>
+<div class="modal-body">    
+    <p class="bodyText">{{popupData.items.bodyText}}</p>
+    <p class="warningText">{{popupData.items.warningText}}</p>
+    <p class="error">{{popupData.items.errorMsg}}</p>
+</div>
+<div class="modal-footer">
+    <button class="btn popupBtn closeBtn" type="button" ng-click="cancel()">Cancel</button>
+    <button class="btn popupBtn" type="button" ng-click="ok()">{{popupData.buttons[0].title}}</button>    
+</div>

@@ -1,0 +1,42 @@
+{
+  "data": {
+    "personalization": {
+      "SoundSettings": {
+        "vibrate": 1,
+        "volume": {
+          "media": "80",
+          "rigntone": "100",
+          "alarm": "100"
+        },
+        "Tones": {
+          "ringtone": "Ringingtone",
+          "alert": "clockSound",
+          "dialPaid": 1,
+          "Camera": 1,
+          "sentMessge": 0,
+          "unlockScreen": 1
+        }
+      },
+      "homeScreen": {
+        "homescreenApps": [
+          "app1",
+          "app2",
+          "app3"
+        ]
+      },
+      "search": {
+        "searchEngine": "google",
+        "searchSuggestions": 1
+      },
+      "dateTime": {
+        "setAutomatically": 1,
+        "date": "12222",
+        "timeZone": "+5: 30",
+        "timeFormat": "12hour"
+      },
+      "language": "englishUS"
+    }
+  },
+  "status": "200",
+  "message": "success"
+}

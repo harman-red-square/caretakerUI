@@ -1,0 +1,17 @@
+<div class="col-sm-12"> 
+     <div class="col-sm-12 pageHeader">
+        <div class="col-sm-9 pageTitle">
+            <h3>Settings</h3>
+        </div>
+        <div class="col-sm-3 pageBtn">
+            <button type="button" ng-click="save()" class="btn btn-default">Save</button>
+        </div>
+    </div>  
+
+    <div class="mainMenu">
+        <ul>
+            <li ng-repeat="item in items" ng-class="{selected: item.isSelect}" ng-click="switchTab(item, $index)">{{item.name}}</li>                        
+        </ul>
+    </div> 
+    <div ng-include="currentTab"></div>
+</div>    

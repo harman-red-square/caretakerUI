@@ -1,0 +1,44 @@
+.modal-dialog{
+   width: 480px; 
+}
+
+.modal-content{
+    padding: 0px 15px;
+}
+
+.modal-header {
+    font-size: 24px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+.modal-body > p{
+    font-size: 16px;
+}
+
+.modal-body > .modalForm{
+    height: auto;
+    overflow: hidden;
+}
+.modal-cross-btn{
+    float: right;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    border: 1px solid #c0c0c0;
+    font-size: 18px;
+    border-radius: 4px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.modal-footer > .closeBtn{
+    float: left;
+}
+
+.modal-footer > .popupBtn{
+    background: #fff;
+    border: 1px solid #c0c0c0;
+    padding: 4px 12px;
+}

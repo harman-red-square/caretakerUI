@@ -1,0 +1,79 @@
+{
+    "data": {
+        "settings": {
+            "networkConnect": {
+                "geoLocation": 0
+            },
+            "callSettings": {
+                "voiceMail": "2345",
+                "callForward": [
+                    {
+                        "callFowardOption": "ALWAYS_FORWARD",
+                        "callFowardEnabled": 1,
+                        "callFowardNumber": "1233444"
+                    },
+                    {
+                        "callFowardOption": "FORWARD_WHEN_BUSY",
+                        "callFowardEnabled": 1,
+                        "callFowardNumber": "1233444"
+                    }
+                ]
+            },
+            "cellularData": {
+                "dataRoaming": 1
+            },
+            "personalization": {
+                "SoundSettings": {
+                    "vibrate": 1,
+                    "volume": {
+                        "media": "80",
+                        "rigntone": "100",
+                        "alarm": "100"
+                    },
+                    "Tones": {
+                        "ringtone": "Ringing tone",
+                        "alert": "clock Sound",
+                        "dialPaid": 1,
+                        "Camera": 1,
+                        "sentMessge": 0,
+                        "unlockScreen": 1
+                    }
+                },
+                "search": {
+                    "searchEngine": "google",
+                    "searchSuggestions": 1
+                },
+                "dateTime": {
+                    "setAutomatically": 1,
+                    "date": "12222",
+                    "timeZone": "+5:30",
+                    "timeFormat": "12 hour"
+                },
+                "language": "english US"
+            },
+            "privacy": {
+                "screenLock": 1,
+                "passcodeLock": {
+                    "isEnabled": 1,
+                    "passcode": "234455",
+                    "requirePasscode": "immediately"
+                }
+            },
+            "storage": {
+                "mediaStorage": {
+                    "format": 1
+                }
+            },
+            "accessibility": {
+                "colorFilter": {
+                    "isEnabled": 1,
+                    "invert": 0,
+                    "grayscale": 1,
+                    "contrast": "40"
+                }
+            }
+        }
+    },
+    "status": "200",
+    "message": "success"
+}

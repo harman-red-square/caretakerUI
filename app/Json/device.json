@@ -1,0 +1,15 @@
+ {
+    "data": {
+        "accessibility": {
+                "colorFilter": {
+                    "isEnabled": 1,
+                    "invert": 1,
+                    "grayscale": 1,
+                    "contrast": "10"
+                }
+            }
+        
+    },
+    "status": "200",
+    "message": "success"
+}

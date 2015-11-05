@@ -1,0 +1,32 @@
+{
+    "data":{
+        "dashboardIcons":[{
+            "label":"Call logs",
+            "url":"callLogs"
+        },{
+            "label":"Messages",
+            "url":"messages"
+        },{
+            "label":"Contacts",
+            "url":"contacts"
+        },{
+            "label":"Alarm",
+            "url":"alarm"
+        },{
+            "label":"Settings",
+            "url":"settings"
+        },{
+            "label":"Photos",
+            "url":"photos"
+        },{
+            "label":"Videos",
+            "url":"videos"
+        },{
+            "label":"Push Adress",
+            "url":"pushAddress"
+        },{
+            "label":"Find My Device",
+            "url":"findMyDevice"
+        }]
+    }
+}

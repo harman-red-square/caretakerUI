@@ -1,0 +1,19 @@
+{
+    "data": {
+        "privacyAndSecurity": {
+            "privacy": {
+                "screenLock": 1,
+                "passcodeLock": {
+                    "isEnabled": 0,
+                    "passcode":"2344",
+		    "requirePasscode":"immediately"
+
+                }
+            },
+            "status": "200",
+            "message": "success"
+        }
+    }
+}
+
+

@@ -1,0 +1,40 @@
+<div class="col-mod-12">
+    <div class="modal-header ng-scope">
+        <span class="modal-title ng-binding">Change Passcode</span>
+        <span class="modal-cross-btn" ng-click="cancel()">✖</span>
+    </div>
+    <div class="modal-body">
+        <div class="col-mod-12 modalForm">
+            <form name="changePasscode">
+                <div class="col-sm-12 noPadding bottomMargin">
+                    <label class="control-label col-sm-5 noPadding">Current Passcode:</label>
+                    <div class="col-sm-7 noPadding">
+                        <input class="form-control passwordBoxInput" password="!null" maxlength="1" type="password" ng-model="k.value" ng-repeat="k in popupData.items.data[0]" move-to-next/>
+                    </div>
+                </div>
+                <div class="col-sm-12 noPadding bottomMargin"> 
+                    <label class="control-label col-sm-5 noPadding">Create a Passcode:</label>
+                    <div class="col-sm-7 noPadding">
+                        <input class="form-control passwordBoxInput" maxlength="1" type="password" ng-model="l.value" ng-repeat="l in popupData.items.data[1]" move-to-next/>
+                    </div>
+                </div>
+                <div class="col-sm-12 noPadding bottomMargin"> 
+                    <label class="control-label col-sm-5 noPadding">Confirm a Passcode:</label>
+                    <div class="col-sm-7 noPadding">
+                        <input class="form-control passwordBoxInput" maxlength="1" type="password" ng-model="m.value" ng-repeat="m in popupData.items.data[2]" move-to-next/>
+                    </div>
+                </div>
+                
+                <div class="errorMsg" style="color: red">{{errorMsg}}</div>          
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer ng-scope">
+        <button class="btn popupBtn closeBtn" type="button" ng-click="cancel()">Cancel</button>
+        <button class="btn popupBtn ng-binding" type="button" ng-click="ok()">Ok</button>    
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,62 @@
+<div class="col-mod-12 settingForm" ng-controller="PrivacyandsecurityCtrl">
+    <form name="privacyAndSecurity">
+        <div class="form-group settingsFormGroup">
+            <div class="col-sm-12 settingFormHeader">
+                <h3>Screen Lock</h3>
+            </div>
+            <div class="col-sm-12 settingFormItem">
+                <label class="control-label col-sm-3">Lock Screen</label>
+                <div class="col-sm-offset-1 col-sm-8">
+                    <div class="radio settingFormInput">
+                        <div class="onoffswitch">
+                            <input type="checkbox" name="onoffswitch" ng-true-value="1" ng-false-value="0" class="onoffswitch-checkbox" id="myonoffswitch"  ng-model="items.privacy.screenLock" checked>
+                            <label class="onoffswitch-label" for="myonoffswitch"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div ng-show="items.privacy.screenLock">
+                <div class="col-sm-12 settingFormItem">
+                    <label class="control-label col-sm-3">Passcode</label>
+                    <div class="col-sm-offset-1 col-sm-8">
+                        <div class="radio settingFormInput">
+                            <div class="radio settingFormInput">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="onoffswitch1" ng-true-value="1" ng-false-value="0" class="onoffswitch-checkbox" id="myonoffswitch1"  ng-model="items.privacy.passcodeLock.isEnabled" ng-click ="openPopup()" checked>
+                                    <label class="onoffswitch-label" for="myonoffswitch1"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-show="createPasscode">
+                        <div  class="col-sm-12 settingFormItem">
+                            <label class="control-label col-sm-3"></label>
+                            <div class="col-sm-offset-1 col-sm-8">
+                                <div class="radio settingFormInput">
+                                    <div class="radio settingFormInput">
+                                        <button type="button" class="btn btn-default" ng-click="changePasscode()">Change Passcode</button>                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 settingFormItem">
+                            <label class="control-label1 col-sm-3">Require Passcode</label> 
+                            <div class="col-sm-offset-1 col-sm-8">
+                                <div class="radio settingFormInput">
+                                    <select class="form-control" ng-model="items.privacy.passcodeLock.requirePasscode" ng-change="checkName(pass)" ng-options="search.pass as search.pass for search in passcodeData"></select>       
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 settingFormItem">
+                        <div>
+                            <button type="button" class="btn btn-default" ng-click="resetAll()">Reset to Default</button>                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+

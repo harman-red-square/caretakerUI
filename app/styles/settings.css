@@ -1,0 +1,138 @@
+.settingsFormGroup{
+    min-height: 42px;
+    height: auto !important;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.settingsFormGroup input[type="text"]{
+    max-width: 180px;
+}
+
+.settingsFormGroup .settingFormItem{
+    min-height: 42px;
+    padding: 0;
+}
+
+.settingsFormGroup .settingFormItem .multipleInput{
+    width: 100%;
+}
+
+.multipleInput span{
+    display: inline-block;
+    font-style: normal;
+    width: 44%;
+    text-align: right;
+} 
+
+.multipleInput input[type="text"]{
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.settingsFormGroup input[type="text"].hasError{
+    border:2px solid red;
+}
+
+.volume{
+    margin-left: 101%;
+    margin-top: -11%;
+}
+
+.settingsFormGroup .control-label{
+    line-height: 40px;
+    font-size: 14px;
+}
+
+.settingsFormGroup .settingFormInput{
+    float: right;
+    min-width: 180px;   
+}
+.settingsFormGroup .settingFormOptions{
+    margin-left: 85%;
+    word-wrap: break-word;
+}
+.settingsFormGroup .datePicker{
+    margin-left: 20%;
+}
+.input-group .datePicker:first-child{
+    float: right;
+}
+
+.settingsFormGroup .settingsInfoText{
+    font-size: 12px;
+    color: #909090;        
+}
+
+.settingsFormGroup .settingFormHeader{
+    border-bottom: 1px solid #c0c0c0;
+    margin-bottom: 12px;
+}
+
+.settingsFormGroup .settingFormHeader h3{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.settingFormItem .rightItem{
+    margin-top: 10px
+}
+
+.settingFormItem .rightItem .rightItemRow{
+    margin-bottom: 10px;
+}
+
+.settingFormItem .rightItem .rightItemRow label{
+    font-weight: normal;
+}
+
+.settingFormItem .rightItem .rightItemRow .childLabel{
+    font-style: italic;
+}
+
+.onoffswitch {
+    position: relative; 
+    width: 72px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; 
+    overflow: hidden; 
+    cursor: pointer;
+    height: 29px; 
+    padding: 0; 
+    line-height: 29px;
+    width: 70px;
+    border: 1px solid #999999; 
+    border-radius: 29px;
+    background-color: #EEEEEE;
+    transition: background-color 0.3s ease-in;
+}
+.onoffswitch-label:before {
+    content: "";
+    display: block; 
+    width: 29px; 
+    margin: 0px;
+    background: #FAF2F2;
+    position: absolute; 
+    top: 0; 
+    bottom: 0;
+    right: 44px;
+    border: 1px solid #999999; 
+    border-radius: 29px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+    background-color: #34A7C1;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    border-color: #34A7C1;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    right: 0px; 
+}
+
+
